@@ -1,8 +1,8 @@
 {
-  "name": "arao_araujo",
+  "name": "bruno_mineiro",
   "version": "1.0.0",
-  "title": "Arão Araujo",
-  "homepage": "http://www.araoaraujo.com.br",
+  "title": "Bruno Mineiro",
+  "homepage": "http://www.brunomineiro70.com.br",
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-less": "^0.11.4",

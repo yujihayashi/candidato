@@ -27,7 +27,7 @@ module.exports = function( grunt ) {
     }, // less
     uglify : {
       options : {
-        mangle : false
+        mangle : false 
       },
 
       my_target : {
