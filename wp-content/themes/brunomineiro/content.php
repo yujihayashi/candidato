@@ -9,17 +9,19 @@
  * @since Twenty Fourteen 1.0
  */
 ?>
+<?php if(!is_category('propostas') && !is_single()):$postClasse = 'media-list';endif; ?>
+<article id="post-<?php the_ID(); ?>" <?php post_class($postClasse); ?>>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php twentyfourteen_post_thumbnail(); ?>
-
+	<?php if ( !is_category('propostas') && is_single() ) : ?>
+		<?php twentyfourteen_post_thumbnail(); ?>
+	<?php elseif ( !is_category('propostas') && !is_single() ) : ?>
+	<div class="media">
+		<span class="pull-left"><?php twentyfourteen_post_thumbnail(); ?></span>
+		<div class="media-body">
+	<?php endif; ?>
 	<header class="entry-header">
-		<?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) && twentyfourteen_categorized_blog() ) : ?>
-		<div class="entry-meta">
-			<span class="cat-links"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'twentyfourteen' ) ); ?></span>
-		</div>
+		
 		<?php
-			endif;
 
 			if ( is_single() ) :
 				the_title( '<h1 class="entry-title text-primary">', '</h1>' );
@@ -27,7 +29,9 @@
 				the_title( '<h1 class="entry-title text-primary"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
 			endif;
 		?>
-
+		<?php if ( is_category('propostas') ) : ?>
+			<?php twentyfourteen_post_thumbnail(); ?>
+		<?php endif; ?>
 		<div class="entry-meta">
 			<?php
 				if ( 'post' == get_post_type() )
@@ -48,6 +52,10 @@
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
+	<?php elseif ( is_category() ) : ?>
+	<div class="entry-summary">
+		<?php the_excerpt(); ?>
+	</div><!-- .entry-summary -->
 	<?php else : ?>
 	<div class="entry-content">
 		<?php
@@ -63,4 +71,8 @@
 	<?php endif; ?>
 
 	<?php the_tags( '<footer class="entry-meta"><span class="tag-links">', '', '</span></footer>' ); ?>
+<?php if ( !is_category('propostas') && !is_single() ) : ?>
+</div> <!-- .media-body -->
+</div> <!-- .media -->
+<?php endif; ?>
 </article><!-- #post-## -->

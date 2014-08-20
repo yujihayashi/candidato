@@ -1,14 +1,15 @@
 .icon{ background:url("icon.png") top left no-repeat; }
 .icon-agenda{ width:49px; height:49px; background-position:-1px -1px; }
-.icon-balao{ width:47px; height:47px; background-position:-1px -51px; }
-.icon-audio{ width:39px; height:42px; background-position:-1px -99px; }
-.icon-video{ width:39px; height:41px; background-position:-1px -142px; }
-.icon-arrow-right-white{ width:35px; height:40px; background-position:-1px -184px; }
-.icon-arrow-left-white{ width:35px; height:40px; background-position:-1px -225px; }
-.icon-facebook{ width:20px; height:32px; background-position:-1px -266px; }
-.icon-instagram{ width:30px; height:30px; background-position:-1px -299px; }
-.icon-youtube{ width:35px; height:26px; background-position:-1px -330px; }
-.icon-arrow-right{ width:21px; height:24px; background-position:-22px -266px; }
-.icon-arrow-left{ width:22px; height:24px; background-position:-1px -357px; }
-.icon-mail{ width:33px; height:23px; background-position:-1px -382px; }
+.icon-balao{ width:47px; height:47px; background-position:-51px -1px; }
+.icon-audio{ width:39px; height:42px; background-position:-99px -1px; }
+.icon-video{ width:39px; height:41px; background-position:-139px -1px; }
+.icon-arrow-right-white{ width:35px; height:40px; background-position:-179px -1px; }
+.icon-arrow-left-white{ width:35px; height:40px; background-position:-1px -51px; }
+.icon-compartilhe-facebook{ width:231px; height:36px; background-position:-1px -92px; }
+.icon-facebook{ width:20px; height:32px; background-position:-37px -51px; }
+.icon-instagram{ width:30px; height:30px; background-position:-58px -51px; }
+.icon-youtube{ width:35px; height:26px; background-position:-89px -51px; }
+.icon-arrow-right{ width:21px; height:24px; background-position:-125px -51px; }
+.icon-arrow-left{ width:22px; height:24px; background-position:-147px -51px; }
+.icon-mail{ width:33px; height:23px; background-position:-170px -51px; }
 

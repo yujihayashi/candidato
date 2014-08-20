@@ -32,6 +32,7 @@ FONTS START
 **********************************************************************************************/
 .navbar {font-family: 'robotoregular', Arial, sans-serif;}
 .box, .navbar .nav > li.current-menu-item > a, .navbar .sub-menu {font-family: 'robotobold', Arial, sans-serif;}
+.widget.sendpress .widget-title {font-family: 'robotomedium_italic', Arial, sans-serif;}
 /**********************************************************************************************
 FONTS END
 */
@@ -39,7 +40,7 @@ FONTS END
 ESTRUTURA START
 **********************************************************************************************/
 .extra-header {
-    background: @primary-color url(images/bg-header.jpg) no-repeat center top;position: relative;
+    background: @primary-color url(images/bg-header.jpg) no-repeat center top;position: relative;margin-bottom: 40px; 
     .container {}
     .menu-principal-container {padding-top:19px;}
     .navbar-brand {height: 114px;padding-top:16px;padding-bottom: 16px;}
@@ -53,24 +54,24 @@ ESTRUTURA START
                     > li {
                         float: left;
                         > a {display: block;padding: 8px 10px;color: #FFF;}
-                        &.current-menu-item {
+                        &.current-menu-item, &.current-menu-parent {
                             a {color: @primary-color;}
                         }
                         * {white-space: nowrap;}
                     }
                 }
-                &.current-menu-item {
+                &.current-menu-item, &.current-menu-parent {
                     > a {background: @secondary-color url(images/bg-menu-active.gif) repeat-x bottom;color: #FFF;}
                 }
             }
         }
     }
     .social-header {
-        width: 96px;text-align: center;margin-left: 15px;
+        width: 96px;text-align: center;margin-left: 15px;z-index: 1010;
         > a {display: inline-block;padding:5px;min-width: 47%;}
     }
 }
-.site-header-bottom {background: @secondary-color;position: absolute;left: 0;right: 0;height: 10px;top: 100%;}
+.site-header-bottom {background: @secondary-color;position: absolute;left: 0;right: 0;height: 10px;top: 100%;z-index: 1009;}
 .site-content {min-height: 300px;}
 
 .extra-boxs {
@@ -100,6 +101,17 @@ ESTRUTURA START
 .extra-footer {
     .site-footer {
         > .container {padding-top:20px;padding-bottom: 20px;}
+        .widget {
+            width: 31%;float: left;
+            &:nth-child(2) {text-align: center;}
+            &.sendpress {
+                width: 38%;
+                > .sendpress, .widget-title {float: left;}
+                .widget-title {font-size: 21px;color: @primary-color;height: 67px;border-left:24px solid @secondary-color;padding:10px 20px 0 10px;margin:0;width: 44%;}
+                > .sendpress {width: 47%;position: relative;}
+                .sendpress-submit {position: absolute;right: -38px;top: 31px;margin-top:0;}
+            }
+        }
     }
 }
 /**********************************************************************************************
@@ -120,16 +132,34 @@ CLASSES START
     &, .cycle-slideshow, .cycle-slideshow li {width: 100%;height: 404px;}
 
 }
+.category {
+    .post-thumbnail {
+        overflow: hidden;height: 200px;width: 100%;margin-bottom: 10px;-webkit-border-radius: 3px;-moz-border-radius: 3px;-ms-border-radius: 3px;-o-border-radius: 3px;border-radius: 3px;display: block;
+    }
+}
 
 .imagem {display: inline-block;overflow: hidden;max-width: 100%;}
 .imagem-rounded {-webkit-border-radius: 150px;-moz-border-radius: 150px;border-radius: 150px;}
 .inline-block {display:inline-block;}
 [class^='icon-'], [class*='icon-'] {background-repeat:no-repeat;vertical-align:middle;display:inline-block;background-image:url(images/icon.png);}
+.lista-propostas {
+    margin: 0 -20px;
+    .grid-sizer, .item {width: 50%;}
+    .item {padding:20px;}
+}
 
 .page-header {border-bottom: 0;margin-bottom: 0;}
 
+.single-post {
+    .post-thumbnail {
+        height: 300px;overflow: hidden;width: 100%;margin-bottom: 20px;-webkit-border-radius: 3px;-moz-border-radius: 3px;-ms-border-radius: 3px;-o-border-radius: 3px;border-radius: 3px;
+        img {min-width: 100%;}
+    }
+}
 .space {width:1%;display:inline-block;height:100%;vertical-align:middle;}
 .relative {position: relative;}
+
+.wp-post-image {max-width: 100%;height: auto;}
 /**********************************************************************************************
 CLASSES END
 */

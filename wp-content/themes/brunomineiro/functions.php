@@ -244,7 +244,10 @@ function twentyfourteen_scripts() {
 		wp_enqueue_script( 'twentyfourteen-keyboard-image-navigation', get_template_directory_uri() . '/js/keyboard-image-navigation.js', array( 'jquery' ), '20130402' );
 	}
 
-	if ( is_active_sidebar( 'sidebar-3' ) ) {
+	// if ( is_active_sidebar( 'sidebar-3' ) ) {
+	// 	wp_enqueue_script( 'jquery-masonry' );
+	// }
+	if ( is_category( 'propostas' ) ) {
 		wp_enqueue_script( 'jquery-masonry' );
 	}
 

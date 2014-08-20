@@ -58,19 +58,7 @@
 <footer id="colophon" class="extra-footer" role="contentinfo">
 	<div class="site-footer">
 		<div class="container">
-			<div class="row">
-				<div class="col-md-4">
-					<?php get_sidebar( 'footer' ); ?>
-				</div> <!-- .col-md-4 -->
-				<div class="col-md-3 text-center">
-					<br>
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/bruno-mineiro-sm.png" alt="Logotipo <?php bloginfo( 'name' ); ?>"></a>
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_template_directory_uri(); ?>/images/ptdob.png" alt="Logotipo PTdoB"></a>
-				</div> <!-- .col-md-3 text-center -->
-				<div class="col-md-5">
-					
-				</div> <!-- .col-md-5 -->
-			</div> <!-- .row -->
+			<?php get_sidebar( 'footer' ); ?>
 		</div> <!-- .container -->
 	</div> <!-- .site-footer -->
 </footer><!-- #colophon -->
