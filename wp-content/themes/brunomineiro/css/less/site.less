@@ -78,13 +78,20 @@ ESTRUTURA START
         .lista-box {
             margin: 0 -0.1%;
             .box {
-                position: relative;float: left;margin: 0 0.1%;width: 24%;background: @primary-color;overflow: hidden;
+                position: relative;float: left;margin: 0 0.1%;width: 24.8%;background: @primary-color;overflow: hidden;
                 &, a {height: 250px;}
                 a {color: #FFF;display: block;}
-                .imagem, .icone, .content {display: block;}
+                .imagem, .icone, .icone-content, .content, .content-extra {display: block;}
                 .imagem {position: relative;z-index: 1;}
-                .icone {position: absolute;z-index: 3;right: 0;top: 0;bottom: 0;width: 86px;background: url(images/bg-box-right.png) no-repeat right bottom;}
-                .content {position:absolute;z-index: 2;bottom: 0;right: 0;left: 0; font-size: 18px;line-height: 1;background: url(images/bg-box-bottom.png) no-repeat left top;width: 100%;height: 61px;padding:10px 90px 0 42px;letter-spacing: -1px;text-align: right;}
+                .icone {
+                    position: absolute;z-index: 3;right: 0;top: 0;bottom: 0;width: 70px;background: url(images/bg-box-right.jpg) no-repeat right bottom;
+                    .icone-content {position: absolute;left: 0;right: 0;text-align: center;bottom:10px;}
+                }
+                .content {
+                    position:absolute;z-index: 2;bottom: -300px;right: 0;left: 0; font-size: 18px;line-height: 1;background: url(images/bg-box-bottom.png) no-repeat left top;letter-spacing: -1px;text-align: right;
+                    &, .content-extra {width: 100%;}
+                    .content-extra {height: 61px;padding:10px 90px 0 42px;background:url(images/bg-box-bottom-right.jpg) no-repeat right top;}
+                }
             }
         }
     }
@@ -104,6 +111,15 @@ CLASSES START
 [class^='lista-'], [class^='lista-'], [class^='menu-'], [class^='menu-'] ul, .cycle-slideshow {list-style:none;margin-bottom:0;padding-left:0;}
 .btn-gray {background: #EEE;color:#C93F2A;}
 .btn-rounded {-webkit-border-radius: 150px;-moz-border-radius: 150px;border-radius: 150px;}
+
+.box-banner {
+    background: @primary-color;margin-bottom: 2px;position: relative;
+    .cycle-prev, .cycle-next {display: block;position: absolute;top: 50%;margin-top:-58px;height: 116px;width: 100px;text-align: center;background: @secondary-color;padding:38px 0;}
+    .cycle-prev {left: 0;-webkit-border-radius: 0px 3px 3px 0px;-moz-border-radius: 0px 3px 3px 0px;-ms-border-radius: 0px 3px 3px 0px;-o-border-radius: 0px 3px 3px 0px;border-radius: 0px 3px 3px 0px;}
+    .cycle-next {right: 0;-webkit-border-radius: 3px 0px 0px 3px;-moz-border-radius: 3px 0px 0px 3px;-ms-border-radius: 3px 0px 0px 3px;-o-border-radius: 3px 0px 0px 3px;border-radius: 3px 0px 0px 3px;}
+    &, .cycle-slideshow, .cycle-slideshow li {width: 100%;height: 404px;}
+
+}
 
 .imagem {display: inline-block;overflow: hidden;max-width: 100%;}
 .imagem-rounded {-webkit-border-radius: 150px;-moz-border-radius: 150px;border-radius: 150px;}

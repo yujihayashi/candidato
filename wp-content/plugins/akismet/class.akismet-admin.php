@@ -367,8 +367,7 @@ class Akismet_Admin {
 
 			add_comment_meta( $c['comment_ID'], 'akismet_rechecking', true );
 
-			$response = Akismet::http_post( Akismet::build_query( $c ), 'comment-check' );
-			
+			$response = Akismet::http_post( build_query( $c ), 'comment-check' );
 			if ( 'true' == $response[1] ) {
 				wp_set_comment_status( $c['comment_ID'], 'spam' );
 				update_comment_meta( $c['comment_ID'], 'akismet_result', 'true' );
@@ -626,7 +625,7 @@ class Akismet_Admin {
 	}
 	
 	public static function get_akismet_user( $api_key ) {
-		$akismet_user = Akismet::http_post( Akismet::build_query( array( 'key' => $api_key ) ), 'get-subscription' );
+		$akismet_user = Akismet::http_post( build_query( array( 'key' => $api_key ) ), 'get-subscription' );
 
 		if ( ! empty( $akismet_user[1] ) )
 			$akismet_user = json_decode( $akismet_user[1] );
@@ -640,7 +639,7 @@ class Akismet_Admin {
 		$stat_totals = array();
 
 		foreach( array( '6-months', 'all' ) as $interval ) {
-			$response = Akismet::http_post( Akismet::build_query( array( 'blog' => urlencode( get_bloginfo('url') ), 'key' => $api_key, 'from' => $interval ) ), 'get-stats' );
+			$response = Akismet::http_post( build_query( array( 'blog' => urlencode( get_bloginfo('url') ), 'key' => $api_key, 'from' => $interval ) ), 'get-stats' );
 
 			if ( ! empty( $response[1] ) ) {
 				$stat_totals[$interval] = json_decode( $response[1] );
@@ -650,7 +649,7 @@ class Akismet_Admin {
 	}
 	
 	public static function verify_wpcom_key( $api_key, $user_id, $token = '' ) {
-		$akismet_account = Akismet::http_post( Akismet::build_query( array(
+		$akismet_account = Akismet::http_post( build_query( array(
 			'user_id'          => $user_id,
 			'api_key'          => $api_key,
 			'token'            => $token,
@@ -675,11 +674,11 @@ class Akismet_Admin {
 
 	public static function display_spam_check_warning() {
 		Akismet::fix_scheduled_recheck();
+		
+		$link_text = apply_filters( 'akismet_spam_check_warning_link_text', sprintf( __( 'Please check your <a href="%s">Akismet configuration</a> and contact your web host if problems persist.', 'akismet'), esc_url( self::get_page_url() ) ) );
 
-		if ( wp_next_scheduled('akismet_schedule_cron_recheck') > time() && self::get_number_spam_waiting() > 0 ) {
-			$link_text = apply_filters( 'akismet_spam_check_warning_link_text', sprintf( __( 'Please check your <a href="%s">Akismet configuration</a> and contact your web host if problems persist.', 'akismet'), esc_url( self::get_page_url() ) ) );
+		if ( self::get_number_spam_waiting() > 0 && wp_next_scheduled('akismet_schedule_cron_recheck') > time() )
 			Akismet::view( 'notice', array( 'type' => 'spam-check', 'link_text' => $link_text ) );
-		}
 	}
 
 	public static function display_invalid_version() {

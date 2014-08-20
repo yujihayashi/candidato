@@ -16,38 +16,38 @@
 		<div class="container">
 			<div class="lista-box">
 				<div class="box">
-					<a href="">
+					<a href="#" title="Acompanhe o programa do dia">
 						<span class="imagem"><img src="" alt=""></span>
-						<span class="icone"><span class="icon-video"></span></span>
+						<span class="icone"><span class="icone-content"><span class="icon-video"></span></span></span>
 						<span class="content">
-							Acompanhe o programa do dia
+							<span class="content-extra">Acompanhe o programa do dia</span>
 						</span>
 					</a>
 				</div> <!-- .box -->
 				<div class="box">
-					<a href="">
+					<a href="#" title="Os compromissos do 70 com o povo">
 						<span class="imagem"><img src="" alt=""></span>
-						<span class="icone"><span class="icon-balao"></span></span>
+						<span class="icone"><span class="icone-content"><span class="icon-balao"></span></span></span>
 						<span class="content">
-							Os compromissos do 70 com o povo
+							<span class="content-extra">Os compromissos do 70 com o povo</span>
 						</span>
 					</a>
 				</div> <!-- .box -->
 				<div class="box">
-					<a href="">
+					<a href="#" title="Veja a agenda de Bruno e Aline">
 						<span class="imagem"><img src="" alt=""></span>
-						<span class="icone"><span class="icon-agenda"></span></span>
+						<span class="icone"><span class="icone-content"><span class="icon-agenda"></span></span></span>
 						<span class="content">
-							Veja a agenda de Bruno e Aline
+							<span class="content-extra">Veja a agenda de Bruno e Aline</span>
 						</span>
 					</a>
 				</div> <!-- .box -->
 				<div class="box">
-					<a href="">
+					<a href="#" title="Escute o jingle da campanha">
 						<span class="imagem"><img src="" alt=""></span>
-						<span class="icone"><span class="icon-audio"></span></span>
+						<span class="icone"><span class="icone-content"><span class="icon-audio"></span></span></span>
 						<span class="content">
-							Escute o Jungle da campanha
+							<span class="content-extra">Escute o jingle da campanha</span>
 						</span>
 					</a>
 				</div> <!-- .box -->

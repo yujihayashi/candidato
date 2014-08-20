@@ -53,6 +53,13 @@ get_header(); ?>
 
 		</div><!-- #content -->
 	</div><!-- #primary -->
+	<div class="box-banner">
+		<a href="javascript:void(0);" class="cycle-prev" title="Banner anterior"><span class="icon-arrow-left-white"></span></a>
+		<a href="javascript:void(0);" class="cycle-next" title="Próximo banner"><span class="icon-arrow-right-white"></span></a>
+		<ul class="cycle-slideshow">
+			<li></li>
+		</ul>
+	</div> <!-- .box-banner -->
 	<?php get_sidebar( 'content' ); ?>
 </div><!-- #main-content -->
 
