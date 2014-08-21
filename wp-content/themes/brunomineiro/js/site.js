@@ -4,21 +4,44 @@ jQuery(document).ready(function ($) {
 		var count = 0;
 		$(this).find('li').each(function () {
 			count = $(this).width()+count;
-			console.log($(this).width());
+			//console.log($(this).width());
 		});
 		$(this).width(count+1).css({marginLeft: '-'+count/2+'px'});
-		console.log('valor'+count);
+		//console.log('valor'+count);
 	});
 	// Apos calcular a largura, o submenu fica oculto
-	$('#primary-navigation .sub-menu').css({display: 'none'});
+	$('.nav > li.menu-item-has-children').each(function () {
+		console.log('oi');
+		$(this).find('.sub-menu').css({display: 'none'});
+		if ($(this).hasClass('current-menu-item')) {
+			$(this).find('.sub-menu').css({display: 'block'});
+			$('.site-header-bottom').css({height: '40px'});
+		} else if ($(this).hasClass('current-menu-parent')) {
+			$(this).find('.sub-menu').css({display: 'block'});
+			$('.site-header-bottom').css({height: '40px'});
+		}
+	});
 
 	// Interacao para surgir o submenu e crescer a barra verde
 	$('.site-header .nav > li.menu-item-has-children').hover(function () {
 		$('.site-header-bottom').stop(true, true).delay(100).animate({height: '40px'}, {duration: 400, queue: true, easing: 'easeInOutExpo'});
+		$('.site-header .nav > li.current-menu-parent .sub-menu, .site-header .nav > li.current-menu-item .sub-menu').stop(true, true).delay(200).fadeOut({duration: 200, queue: true, easing: 'easeInOutExpo'});
 		$(this).find('.sub-menu').stop(true, true).delay(400).fadeIn({duration: 400, queue: true, easing: 'easeInOutExpo'});
 	}, function () {
-		$('.site-header-bottom').stop(true, true).delay(400).animate({height: '10px'}, {duration: 400, queue: true, easing: 'easeInOutExpo'});
-		$(this).find('.sub-menu').stop(true, true).delay(100).fadeOut({duration: 400, queue: true, easing: 'easeInOutExpo'});
+		if ($(this).hasClass('current-menu-item')) {
+			$('.site-header-bottom').stop(true, true).delay(400).animate({height: '40px'}, {duration: 400, queue: true, easing: 'easeInOutExpo'});
+
+		} else if ($(this).hasClass('current-menu-parent')) {
+			$('.site-header-bottom').stop(true, true).delay(400).animate({height: '40px'}, {duration: 400, queue: true, easing: 'easeInOutExpo'});
+		} else {
+			$(this).find('.sub-menu').stop(true, true).delay(100).fadeOut({duration: 400, queue: true, easing: 'easeInOutExpo'});
+			$('.site-header .nav > li.current-menu-parent, .site-header .nav > li.current-menu-item').find('.sub-menu').stop(true, true).delay(100).fadeIn({duration: 400, queue: true, easing: 'easeInOutExpo'});
+			if ($('.site-header .nav > li.current-menu-parent, .site-header .nav > li.current-menu-item').hasClass('menu-item-has-children')) {
+
+			} else {
+				$('.site-header-bottom').stop(true, true).delay(400).animate({height: '10px'}, {duration: 400, queue: true, easing: 'easeInOutExpo'});
+			}
+		}
 	});
 
 	// Interacao com os boxs do rodape

@@ -30,14 +30,30 @@ get_header(); ?>
 			<div class="box-banner">
 				<a href="javascript:void(0);" class="cycle-prev" title="Banner anterior"><span class="icon-arrow-left-white"></span></a>
 				<a href="javascript:void(0);" class="cycle-next" title="Próximo banner"><span class="icon-arrow-right-white"></span></a>
-				<ul class="cycle-slideshow">
-					<li></li>
-				</ul>
-			</div> <!-- .box-banner -->
-		</div><!-- #content -->
-	</div><!-- #primary -->
-	<?php get_sidebar( 'content' ); ?>
-</div><!-- #main-content -->
-
-<?php
-get_footer();
+				<ul class="cycle-slideshow"data-cycle-fx="scrollHorz" data-cycle-timeout="5000"data-cycle-speed="1800"data-cycle-slides="> li"data-cycle-pager=".box-banner .cycle-nav"data-cycle-next=".box-banner .cycle-next"data-cycle-prev=".box-banner .cycle-prev"data-cycle-easing="easeInOutExpo"data-cycle-log="false">
+					<?php $args = array(
+						'orderby'          => 'rating',
+						'category_name'    => 'banner',
+						'categorize'       => 0,
+						'title_li'         => '',
+						'category_orderby' => 'name',
+						'category_order'   => 'ASC',
+						'class'            => 'linkcat',
+						'category_before'  => '<div>',
+						'show_name'		=> false,
+						'category_after'   => '</div>' ); ?> 
+						<?php wp_list_bookmarks($args); ?>
+					</ul>
+				</div> <!-- .box-banner -->
+			</div><!-- #content -->
+		</div><!-- #primary -->
+		<?php get_sidebar( 'content' ); ?>
+	</div><!-- #main-content -->
+<script type="text/javascript">
+	jQuery(document).ready(function ($) {
+		var imagem = $('.box-banner .cycle-slideshow img');
+		imagem.css({marginLeft: '-723px', left: '50%', position: 'absolute'});
+	});
+</script>
+	<?php
+	get_footer();

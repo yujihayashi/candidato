@@ -16,13 +16,28 @@
 		<div class="container">
 			<div class="lista-box">
 				<div class="box">
-					<a href="#" title="Acompanhe o programa do dia">
-						<span class="imagem"><img src="" alt=""></span>
+					<?
+					global $post;
+					$args = array( 'numberposts' => 1, 'category_name' => 'programas-tv' );
+					$posts = get_posts( $args );
+					foreach( $posts as $post ): setup_postdata($post); 
+
+					?>
+					<a href="<?php the_permalink(); ?>" title="Acompanhe o programa do dia">
+						<span class="imagem">
+
+						</span>
 						<span class="icone"><span class="icone-content"><span class="icon-video"></span></span></span>
 						<span class="content">
 							<span class="content-extra">Acompanhe o programa do dia</span>
 						</span>
 					</a>
+					<div class="video">
+						<?php the_excerpt(); ?>
+						<?php
+						endforeach; 
+						?>
+					</div> <!-- .video -->
 				</div> <!-- .box -->
 				<div class="box">
 					<a href="#" title="Os compromissos do 70 com o povo">
@@ -64,6 +79,6 @@
 </footer><!-- #colophon -->
 </div><!-- #page -->
 <?php wp_footer(); ?>
-<script src="http://localhost:35729/livereload.js"></script>
+<!-- <script src="http://localhost:35729/livereload.js"></script> -->
 </body>
 </html>
