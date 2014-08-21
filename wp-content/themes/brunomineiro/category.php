@@ -42,6 +42,7 @@ get_header(); ?>
 					<hr>
 					<?
 					endwhile;
+					wp_reset_postdata();
 					// Previous/next page navigation.
 					twentyfourteen_paging_nav();
 

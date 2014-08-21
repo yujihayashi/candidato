@@ -16,7 +16,7 @@
 		<?php twentyfourteen_post_thumbnail(); ?>
 	<?php elseif ( !is_category('propostas') && !is_single() ) : ?>
 	<div class="media">
-		<span class="pull-left"><?php twentyfourteen_post_thumbnail(); ?></span>
+		<span class="pull-left"><?php the_post_thumbnail('thumbnail'); ?></span>
 		<div class="media-body">
 	<?php endif; ?>
 	<header class="entry-header">

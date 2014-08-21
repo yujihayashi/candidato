@@ -11,7 +11,7 @@ jQuery(document).ready(function ($) {
 	});
 	// Apos calcular a largura, o submenu fica oculto
 	$('.nav > li.menu-item-has-children').each(function () {
-		console.log('oi');
+		//console.log('oi');
 		$(this).find('.sub-menu').css({display: 'none'});
 		if ($(this).hasClass('current-menu-item')) {
 			$(this).find('.sub-menu').css({display: 'block'});

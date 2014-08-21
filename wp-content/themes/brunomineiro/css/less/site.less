@@ -159,6 +159,21 @@ CLASSES START
     .grid-sizer, .item {width: 50%;}
     .item {padding:20px;}
 }
+.lista-downloads {
+    margin:0 -1%;
+    > li {
+        float: left;width: 31%;margin:0 1% 20px;background: #f2f2f2;padding:7px;text-align:center;height: 380px;
+        .entry-title {text-align: left;font-size: 18px;margin-top:0;}
+        hr {margin:8px 0;border-color: #dbdbdb;}
+        .media {
+            > .pull-left {
+                float: none !important;margin-right:0;display: block;height: 260px;overflow: hidden;margin-bottom: 6px;
+                img {max-width: 100%;}
+            }
+        }
+        .descricao {display: none;}
+    }
+}
 
 .page-header {border-bottom: 0;margin-bottom: 0;}
 
@@ -186,10 +201,10 @@ JQUERY UI END
 
 }
 @media (max-width: 767px) {
- /*    .site-geral:before {content:"TABLET";}*/
+   /*    .site-geral:before {content:"TABLET";}*/
 }
 @media (max-width: 480px) {
- /*#GERAL:before {content:"MOBILE";}*/
+   /*#GERAL:before {content:"MOBILE";}*/
 }
 @media (min-width: 768px) and (max-width: 980px) {
     .extra-boxs {
@@ -203,8 +218,8 @@ JQUERY UI END
     }
 }
 @media (min-width: 981px) and (max-width: 1200px) {
- /*#GERAL:before {content:"ACIMA DE TABLET";}*/
- .extra-boxs {
+   /*#GERAL:before {content:"ACIMA DE TABLET";}*/
+   .extra-boxs {
     .site-boxs {
         .lista-box {
             .box {

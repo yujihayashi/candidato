@@ -16,13 +16,13 @@
 		<div class="container">
 			<div class="lista-box">
 				<div class="box">
-					<?
-					global $post;
-					$args = array( 'numberposts' => 1, 'category_name' => 'programas-tv' );
-					$posts = get_posts( $args );
-					foreach( $posts as $post ): setup_postdata($post); 
+					<?php
 
-					?>
+
+$args = array( 'posts_per_page' => 1, 'category_name' => 'programas-tv' );
+
+$myposts = get_posts( $args );
+foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 					<a href="<?php the_permalink(); ?>" title="Acompanhe o programa do dia">
 						<span class="imagem">
 
@@ -34,9 +34,8 @@
 					</a>
 					<div class="video">
 						<?php the_excerpt(); ?>
-						<?php
-						endforeach; 
-						?>
+<?php endforeach; 
+wp_reset_postdata();?>
 					</div> <!-- .video -->
 				</div> <!-- .box -->
 				<div class="box">
