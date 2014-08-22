@@ -1,8 +1,8 @@
 {
-  "name": "bruno_mineiro",
+  "name": "paulo_rocha",
   "version": "1.0.0",
-  "title": "Bruno Mineiro",
-  "homepage": "http://www.brunomineiro70.com.br",
+  "title": "Paulo Rocha",
+  "homepage": "http://www.paulorocha131.com.br",
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-less": "^0.11.4",
