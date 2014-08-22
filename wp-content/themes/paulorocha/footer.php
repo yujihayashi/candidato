@@ -19,10 +19,10 @@
 					<?php
 
 
-$args = array( 'posts_per_page' => 1, 'category_name' => 'programas-tv' );
+					$args = array( 'posts_per_page' => 1, 'category_name' => 'programas-tv' );
 
-$myposts = get_posts( $args );
-foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+					$myposts = get_posts( $args );
+					foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 					<a href="<?php the_permalink(); ?>" title="Veja o programa de TV do Paulo">
 						<span class="imagem">
 
@@ -34,40 +34,40 @@ foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 					</a>
 					<div class="video">
 						<?php the_excerpt(); ?>
-<?php endforeach; 
-wp_reset_postdata();?>
-					</div> <!-- .video -->
-				</div> <!-- .box -->
-				<div class="box">
-					<a href="/categoria/propostas/" title="As propostas de Paulo pro povo">
-						<span class="imagem"><img src="" alt=""></span>
-						<span class="icone"><span class="icone-content"><span class="icon-balao"></span></span></span>
-						<span class="content">
-							<span class="content-extra">As propostas de Paulo pro povo</span>
-						</span>
-					</a>
-				</div> <!-- .box -->
-				<div class="box">
-					<a href="/agenda/" title="Acompanhe a agenda do 131">
-						<span class="imagem"><img src="" alt=""></span>
-						<span class="icone"><span class="icone-content"><span class="icon-agenda"></span></span></span>
-						<span class="content">
-							<span class="content-extra">Acompanhe a agenda do 131</span>
-						</span>
-					</a>
-				</div> <!-- .box -->
-				<div class="box">
-					<a href="#" title="Escute o jingle da campanha">
-						<span class="imagem"><img src="" alt=""></span>
-						<span class="icone"><span class="icone-content"><span class="icon-audio"></span></span></span>
-						<span class="content">
-							<span class="content-extra">Escute o jingle da campanha</span>
-						</span>
-					</a>
-				</div> <!-- .box -->
-			</div> <!-- .lista-box -->
-		</div> <!-- .container -->
-	</div> <!-- .site-boxs -->
+					<?php endforeach; 
+					wp_reset_postdata();?>
+				</div> <!-- .video -->
+			</div> <!-- .box -->
+			<div class="box">
+				<a href="/categoria/propostas/" title="As propostas de Paulo pro povo">
+					<span class="imagem"><img src="" alt=""></span>
+					<span class="icone"><span class="icone-content"><span class="icon-balao"></span></span></span>
+					<span class="content">
+						<span class="content-extra">As propostas de Paulo pro povo</span>
+					</span>
+				</a>
+			</div> <!-- .box -->
+			<div class="box">
+				<a href="/agenda/" title="Acompanhe a agenda do 131">
+					<span class="imagem"><img src="" alt=""></span>
+					<span class="icone"><span class="icone-content"><span class="icon-agenda"></span></span></span>
+					<span class="content">
+						<span class="content-extra">Acompanhe a agenda do 131</span>
+					</span>
+				</a>
+			</div> <!-- .box -->
+			<div class="box">
+				<a href="#" title="Escute o jingle da campanha">
+					<span class="imagem"><img src="" alt=""></span>
+					<span class="icone"><span class="icone-content"><span class="icon-audio"></span></span></span>
+					<span class="content">
+						<span class="content-extra">Escute o jingle da campanha</span>
+					</span>
+				</a>
+			</div> <!-- .box -->
+		</div> <!-- .lista-box -->
+	</div> <!-- .container -->
+</div> <!-- .site-boxs -->
 </div> <!-- .extra-boxs -->
 <footer id="colophon" class="extra-footer" role="contentinfo">
 	<div class="site-footer">

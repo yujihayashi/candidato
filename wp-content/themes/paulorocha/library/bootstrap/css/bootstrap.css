@@ -5,8 +5,8 @@
  */
 
 /*!
- * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=ee28c0fa1f1b0570847a)
- * Config saved to config.json and https://gist.github.com/ee28c0fa1f1b0570847a
+ * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=24049e60a2489b53fda3)
+ * Config saved to config.json and https://gist.github.com/24049e60a2489b53fda3
  */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
@@ -906,12 +906,12 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #ffffff;
+  color: #7e0204;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #d9d9d9;
+  color: #330102;
   text-decoration: underline;
 }
 a:focus {
@@ -3009,7 +3009,7 @@ fieldset[disabled] .btn-danger.active {
   background-color: #ffffff;
 }
 .btn-link {
-  color: #ffffff;
+  color: #7e0204;
   font-weight: normal;
   cursor: pointer;
   border-radius: 0;
@@ -3030,7 +3030,7 @@ fieldset[disabled] .btn-link {
 }
 .btn-link:hover,
 .btn-link:focus {
-  color: #d9d9d9;
+  color: #330102;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -3600,7 +3600,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav .open > a:hover,
 .nav .open > a:focus {
   background-color: #eeeeee;
-  border-color: #ffffff;
+  border-color: #7e0204;
 }
 .nav .nav-divider {
   height: 1px;
@@ -4312,7 +4312,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
   padding: 6px 12px;
   line-height: 1.42857143;
   text-decoration: none;
-  color: #ffffff;
+  color: #7e0204;
   background-color: #ffffff;
   border: 1px solid #dddddd;
   margin-left: -1px;
@@ -4332,7 +4332,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .pagination > li > span:hover,
 .pagination > li > a:focus,
 .pagination > li > span:focus {
-  color: #d9d9d9;
+  color: #330102;
   background-color: #eeeeee;
   border-color: #dddddd;
 }
@@ -4527,7 +4527,7 @@ a.badge:focus {
 }
 a.list-group-item.active > .badge,
 .nav-pills > .active > a > .badge {
-  color: #ffffff;
+  color: #7e0204;
   background-color: #ffffff;
 }
 .nav-pills > li > a > .badge {
@@ -4591,7 +4591,7 @@ a.list-group-item.active > .badge,
 a.thumbnail:hover,
 a.thumbnail:focus,
 a.thumbnail.active {
-  border-color: #ffffff;
+  border-color: #7e0204;
 }
 .thumbnail .caption {
   padding: 9px;

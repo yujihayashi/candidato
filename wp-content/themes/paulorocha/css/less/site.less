@@ -83,7 +83,7 @@ ESTRUTURA START
     }
 }
 .site-header-bottom {background: @secondary-color;position: absolute;left: 0;right: 0;height: 10px;top: 100%;z-index: 1009;}
-.site-content {min-height: 300px;}
+.site-content {min-height: 300px;background: #FFF;padding:20px;}
 
 .extra-boxs {
     .site-boxs {
@@ -114,12 +114,12 @@ ESTRUTURA START
     .site-footer {
         > .container {padding-top:20px;padding-bottom: 20px;}
         .widget {
-            width: 31%;float: left;
+            width: 31%;float: left;color: #FFF;
             &:nth-child(2) {text-align: center;}
             &.sendpress {
-                width: 38%;
+                width: 38%;color: #000;
                 > .sendpress, .widget-title {float: left;}
-                .widget-title {font-size: 21px;color: @primary-color;height: 67px;border-left:24px solid @secondary-color;padding:10px 20px 0 10px;margin:0;width: 44%;}
+                .widget-title {font-size: 21px;color: #FFF;height: 67px;border-left:24px solid @primary-color;padding:10px 20px 0 10px;margin:0;width: 44%;}
                 > .sendpress {width: 47%;position: relative;}
                 .sendpress-submit {position: absolute;right: -38px;top: 31px;margin-top:0;}
             }

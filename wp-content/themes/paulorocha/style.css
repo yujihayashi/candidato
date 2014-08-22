@@ -132,6 +132,8 @@ ESTRUTURA START
 }
 .site-content {
   min-height: 300px;
+  background: #FFF;
+  padding: 20px;
 }
 .extra-boxs .site-boxs .lista-box {
   margin: 0 -0.1%;
@@ -219,12 +221,14 @@ ESTRUTURA START
 .extra-footer .site-footer .widget {
   width: 31%;
   float: left;
+  color: #FFF;
 }
 .extra-footer .site-footer .widget:nth-child(2) {
   text-align: center;
 }
 .extra-footer .site-footer .widget.sendpress {
   width: 38%;
+  color: #000;
 }
 .extra-footer .site-footer .widget.sendpress > .sendpress,
 .extra-footer .site-footer .widget.sendpress .widget-title {
@@ -232,9 +236,9 @@ ESTRUTURA START
 }
 .extra-footer .site-footer .widget.sendpress .widget-title {
   font-size: 21px;
-  color: #7e0204;
+  color: #FFF;
   height: 67px;
-  border-left: 24px solid #da0d12;
+  border-left: 24px solid #7e0204;
   padding: 10px 20px 0 10px;
   margin: 0;
   width: 44%;
