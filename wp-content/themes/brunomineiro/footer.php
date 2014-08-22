@@ -19,10 +19,10 @@
 					<?php
 
 
-$args = array( 'posts_per_page' => 1, 'category_name' => 'programas-tv' );
+					$args = array( 'posts_per_page' => 1, 'category_name' => 'programas-tv' );
 
-$myposts = get_posts( $args );
-foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
+					$myposts = get_posts( $args );
+					foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 					<a href="<?php the_permalink(); ?>" title="Acompanhe o programa do dia">
 						<span class="imagem">
 
@@ -34,9 +34,9 @@ foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 					</a>
 					<div class="video">
 						<?php the_excerpt(); ?>
-<?php endforeach; 
-wp_reset_postdata();?>
 					</div> <!-- .video -->
+					<?php endforeach; 
+					wp_reset_postdata();?>
 				</div> <!-- .box -->
 				<div class="box">
 					<a href="/categoria/propostas/" title="Os compromissos do 70 com o povo">
