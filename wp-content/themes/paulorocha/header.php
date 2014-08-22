@@ -99,3 +99,4 @@
 
 <div id="main" class="site-main">
 	<div class="container">
+		<div class="site-central">

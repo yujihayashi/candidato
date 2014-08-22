@@ -9,6 +9,7 @@
  * @since Twenty Fourteen 1.0
  */
 ?>
+</div> <!-- .site-central -->
 </div> <!-- .container -->
 </div><!-- #main -->
 <div class="extra-boxs">
