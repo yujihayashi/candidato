@@ -138,6 +138,11 @@ ESTRUTURA START
   padding: 20px;
   margin-bottom: 2px;
 }
+.home .site-central {
+  background: none;
+  padding: 0;
+  margin-bottom: 0;
+}
 .extra-boxs .site-boxs .lista-box {
   margin: 0 -0.09%;
 }
@@ -145,7 +150,7 @@ ESTRUTURA START
   position: relative;
   float: left;
   margin: 0 0.1%;
-  width: 24.802%%;
+  width: 24.802%;
   background: #000;
   overflow: hidden;
 }
