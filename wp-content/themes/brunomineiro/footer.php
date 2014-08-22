@@ -39,7 +39,7 @@ wp_reset_postdata();?>
 					</div> <!-- .video -->
 				</div> <!-- .box -->
 				<div class="box">
-					<a href="#" title="Os compromissos do 70 com o povo">
+					<a href="/categoria/propostas/" title="Os compromissos do 70 com o povo">
 						<span class="imagem"><img src="" alt=""></span>
 						<span class="icone"><span class="icone-content"><span class="icon-balao"></span></span></span>
 						<span class="content">
@@ -48,7 +48,7 @@ wp_reset_postdata();?>
 					</a>
 				</div> <!-- .box -->
 				<div class="box">
-					<a href="#" title="Veja a agenda de Bruno e Aline">
+					<a href="/agenda/" title="Veja a agenda de Bruno e Aline">
 						<span class="imagem"><img src="" alt=""></span>
 						<span class="icone"><span class="icone-content"><span class="icon-agenda"></span></span></span>
 						<span class="content">
