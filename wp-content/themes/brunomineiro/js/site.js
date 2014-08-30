@@ -9,6 +9,13 @@ jQuery(document).ready(function ($) {
 		$(this).width(count+1).css({marginLeft: '-'+count/2+'px'});
 		//console.log('valor'+count);
 	});
+$('.lista-box .wp-post-image').each(function () {
+	var leftMove = $(this).width()/2;
+	console.log(leftMove);
+	$(this).css({left: '50%', marginLeft: '-'+leftMove+'px'});
+});
+
+
 	// Apos calcular a largura, o submenu fica oculto
 	$('.nav > li.menu-item-has-children').each(function () {
 		//console.log('oi');

@@ -172,6 +172,16 @@ ESTRUTURA START
 .extra-boxs .site-boxs .lista-box .box .imagem {
   position: relative;
   z-index: 1;
+  height: 100%;
+}
+.extra-boxs .site-boxs .lista-box .box .wp-post-image {
+  max-width: none;
+  max-height: 100%;
+  width: auto;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
 }
 .extra-boxs .site-boxs .lista-box .box .icone {
   position: absolute;
@@ -262,6 +272,20 @@ CLASSES START
   margin-bottom: 0;
   padding-left: 0;
 }
+.alignleft {
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.alignright {
+  float: right;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.aligncenter {
+  display: block;
+  margin: 0 auto 10px;
+}
 .btn-gray {
   background: #EEE;
   color: #C93F2A;
@@ -337,6 +361,14 @@ CLASSES START
   border-radius: 3px;
   display: block;
 }
+.entry-content:after,
+.entry-content:before {
+  content: " ";
+  display: table;
+}
+.entry-content:after {
+  clear: both;
+}
 .imagem {
   display: inline-block;
   overflow: hidden;
@@ -366,6 +398,14 @@ CLASSES START
 }
 .lista-propostas .item {
   padding: 20px;
+}
+.lista-tv {
+  margin: 0 -1%;
+}
+.lista-tv > li {
+  float: left;
+  width: 31%;
+  margin: 0 1% 20px;
 }
 .lista-downloads {
   margin: 0 -1%;
