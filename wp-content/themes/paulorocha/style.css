@@ -149,7 +149,7 @@ ESTRUTURA START
 .extra-boxs .site-boxs .lista-box .box {
   position: relative;
   float: left;
-  margin: 0 0.1%;
+  margin: 0 0.09%;
   width: 24.802%;
   background: #000;
   overflow: hidden;
@@ -227,7 +227,7 @@ ESTRUTURA START
   padding-bottom: 20px;
 }
 .extra-footer .site-footer .widget {
-  width: 31%;
+  width: 60%;
   float: left;
   color: #FFF;
 }
@@ -235,7 +235,7 @@ ESTRUTURA START
   text-align: center;
 }
 .extra-footer .site-footer .widget.sendpress {
-  width: 38%;
+  width: 40%;
   color: #000;
 }
 .extra-footer .site-footer .widget.sendpress > .sendpress,
