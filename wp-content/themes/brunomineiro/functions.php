@@ -96,11 +96,8 @@ function twentyfourteen_setup() {
 	 * Enable support for Post Formats.
 	 * See http://codex.wordpress.org/Post_Formats
 	 */
-	/*add_theme_support( 'post-formats', array(
-		'aside', 'image', 'video', 'audio', 'quote', 'link', 'gallery',
-	) );*/
 	add_theme_support( 'post-formats', array(
-		'image', 'video', 'audio', 'gallery',
+		'aside', 'image', 'video', 'audio', 'quote', 'link', 'gallery',
 	) );
 
 	// This theme allows users to set a custom background.
