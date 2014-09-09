@@ -25,7 +25,7 @@
 					foreach ( $myposts as $post ) : setup_postdata( $post ); ?>
 					<a href="<?php the_permalink(); ?>" title="Acompanhe o programa do dia">
 						<span class="imagem">
-							<?php the_post_thumbnail(); ?>
+
 						</span>
 						<span class="icone"><span class="icone-content"><span class="icon-video"></span></span></span>
 						<span class="content">
@@ -33,7 +33,7 @@
 						</span>
 					</a>
 					<div class="video">
-						
+						<?php the_excerpt(); ?>
 					</div> <!-- .video -->
 					<?php endforeach; 
 					wp_reset_postdata();?>
