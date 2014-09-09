@@ -1,10 +1,10 @@
 /*
-Theme Name: Paulo Rocha
+Theme Name: Bruno Mineiro
 Author: Libra Design +Tech
 Author URI: http://www.libradesign.com.br/
-Description: Tema de Paulo Rocha 131
+Description: Tema de Bruno Mineiro 70
 Version: 1.0
-Text Domain: paulorocha
+Text Domain: brunomineiro
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -20,11 +20,11 @@ FUNÇÕES PADRÕES START
 FUNÇÕES PADRÕES END
 */
 ::selection {
-  background-color: #7e0204;
+  background-color: #054a37;
   color: #FFF;
 }
 ::-moz-selection {
-  background-color: #7e0204;
+  background-color: #054a37;
   color: #FFF;
 }
 small {
@@ -57,11 +57,8 @@ FONTS END
 /*
 ESTRUTURA START
 **********************************************************************************************/
-body {
-  background: #F7F7F7;
-}
 .extra-header {
-  background: #7e0204 url(images/bg-header.jpg) no-repeat center top;
+  background: #054a37 url(images/bg-header.jpg) no-repeat center top;
   position: relative;
   margin-bottom: 40px;
 }
@@ -70,8 +67,8 @@ body {
 }
 .extra-header .navbar-brand {
   height: 114px;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 .extra-header .navbar {
   margin-bottom: 0;
@@ -103,14 +100,14 @@ body {
 }
 .extra-header .navbar .nav > li .sub-menu > li.current-menu-item a,
 .extra-header .navbar .nav > li .sub-menu > li.current-menu-parent a {
-  color: #7e0204;
+  color: #054a37;
 }
 .extra-header .navbar .nav > li .sub-menu > li * {
   white-space: nowrap;
 }
 .extra-header .navbar .nav > li.current-menu-item > a,
 .extra-header .navbar .nav > li.current-menu-parent > a {
-  background: #da0d12 url(images/bg-menu-active.gif) repeat-x bottom;
+  background: #96ac47 url(images/bg-menu-active.gif) repeat-x bottom;
   color: #FFF;
 }
 .extra-header .social-header {
@@ -125,7 +122,7 @@ body {
   min-width: 47%;
 }
 .site-header-bottom {
-  background: #da0d12;
+  background: #96ac47;
   position: absolute;
   left: 0;
   right: 0;
@@ -136,25 +133,15 @@ body {
 .site-content {
   min-height: 300px;
 }
-.site-central {
-  background: #FFF;
-  padding: 20px;
-  margin-bottom: 2px;
-}
-.home .site-central {
-  background: none;
-  padding: 0;
-  margin-bottom: 0;
-}
 .extra-boxs .site-boxs .lista-box {
-  margin: 0 -0.09%;
+  margin: 0 -0.1%;
 }
 .extra-boxs .site-boxs .lista-box .box {
   position: relative;
   float: left;
-  margin: 0 0.09%;
-  width: 24.802%;
-  background: #000;
+  margin: 0 0.1%;
+  width: 24.8%;
+  background: #054a37;
   overflow: hidden;
 }
 .extra-boxs .site-boxs .lista-box .box,
@@ -185,6 +172,14 @@ body {
 .extra-boxs .site-boxs .lista-box .box .imagem {
   position: relative;
   z-index: 1;
+  height: 250px;
+}
+.extra-boxs .site-boxs .lista-box .box .imagem img {
+  max-width: none;
+  max-height: 100%;
+  width: auto;
+  position: absolute;
+  top: 0;
 }
 .extra-boxs .site-boxs .lista-box .box .icone {
   position: absolute;
@@ -193,7 +188,7 @@ body {
   top: 0;
   bottom: 0;
   width: 70px;
-  background: #7e0204;
+  background: url(images/bg-box-right.jpg) no-repeat right bottom;
 }
 .extra-boxs .site-boxs .lista-box .box .icone .icone-content {
   position: absolute;
@@ -206,23 +201,21 @@ body {
   position: absolute;
   z-index: 2;
   bottom: -300px;
-  right: 0px;
-  left: 20px;
+  right: 0;
+  left: 0;
   font-size: 18px;
   line-height: 1;
-  background: #da0d12;
+  background: url(images/bg-box-bottom.png) no-repeat left top;
   letter-spacing: -1px;
   text-align: right;
-  -webkit-border-radius: 3px 0px 0px 0px;
-  -moz-border-radius: 3px 0px 0px 0px;
-  -ms-border-radius: 3px 0px 0px 0px;
-  -o-border-radius: 3px 0px 0px 0px;
-  border-radius: 3px 0px 0px 0px;
+}
+.extra-boxs .site-boxs .lista-box .box .content,
+.extra-boxs .site-boxs .lista-box .box .content .content-extra {
+  width: 100%;
 }
 .extra-boxs .site-boxs .lista-box .box .content .content-extra {
   height: 61px;
-  padding: 10px 90px 0 22px;
-  width: 100%;
+  padding: 10px 90px 0 42px;
   background: url(images/bg-box-bottom-right.jpg) no-repeat right top;
 }
 .extra-footer .site-footer > .container {
@@ -230,16 +223,14 @@ body {
   padding-bottom: 20px;
 }
 .extra-footer .site-footer .widget {
-  width: 62%;
+  width: 31%;
   float: left;
-  color: #7e0204;
 }
 .extra-footer .site-footer .widget:nth-child(2) {
   text-align: center;
 }
 .extra-footer .site-footer .widget.sendpress {
-  width: 40%;
-  color: #000;
+  width: 38%;
 }
 .extra-footer .site-footer .widget.sendpress > .sendpress,
 .extra-footer .site-footer .widget.sendpress .widget-title {
@@ -247,9 +238,9 @@ body {
 }
 .extra-footer .site-footer .widget.sendpress .widget-title {
   font-size: 21px;
-  color: #7e0204;
+  color: #054a37;
   height: 67px;
-  border-left: 24px solid #7e0204;
+  border-left: 24px solid #96ac47;
   padding: 10px 20px 0 10px;
   margin: 0;
   width: 44%;
@@ -289,7 +280,7 @@ CLASSES START
   border-radius: 150px;
 }
 .box-banner {
-  background: #7e0204;
+  background: #054a37;
   margin-bottom: 2px;
   position: relative;
 }
@@ -302,7 +293,7 @@ CLASSES START
   height: 116px;
   width: 100px;
   text-align: center;
-  background: #da0d12;
+  background: #96ac47;
   padding: 38px 0;
   z-index: 2;
 }
@@ -324,7 +315,8 @@ CLASSES START
 }
 .box-banner,
 .box-banner .cycle-slideshow,
-.box-banner .cycle-slideshow li {
+.box-banner .cycle-slideshow li,
+.box-banner .cycle-slideshow li a {
   width: 100%;
   height: 404px;
 }
@@ -338,9 +330,12 @@ CLASSES START
 }
 .box-banner .cycle-slideshow li a {
   display: block;
+  position: relative;
 }
 .box-banner .cycle-slideshow li a img {
   max-height: 100%;
+  position: absolute;
+  top: 0;
 }
 .category .post-thumbnail {
   overflow: hidden;

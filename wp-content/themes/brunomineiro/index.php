@@ -55,7 +55,7 @@ get_header(); ?>
 		$('.box-banner .cycle-slideshow img').each(function () {
 			$(this).load(function() {
 			var leftMove = $(this).width()/2;
-			console.log(leftMove);
+			//console.log(leftMove);
 			$(this).css({left: '50%', marginLeft: '-'+leftMove+'px'});
 			});
 		});

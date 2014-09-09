@@ -172,6 +172,14 @@ ESTRUTURA START
 .extra-boxs .site-boxs .lista-box .box .imagem {
   position: relative;
   z-index: 1;
+  height: 250px;
+}
+.extra-boxs .site-boxs .lista-box .box .imagem img {
+  max-width: none;
+  max-height: 100%;
+  width: auto;
+  position: absolute;
+  top: 0;
 }
 .extra-boxs .site-boxs .lista-box .box .icone {
   position: absolute;
@@ -307,7 +315,8 @@ CLASSES START
 }
 .box-banner,
 .box-banner .cycle-slideshow,
-.box-banner .cycle-slideshow li {
+.box-banner .cycle-slideshow li,
+.box-banner .cycle-slideshow li a {
   width: 100%;
   height: 404px;
 }

@@ -1,16 +1,16 @@
 /*
-Theme Name: Paulo Rocha
+Theme Name: Bruno Mineiro
 Author: Libra Design +Tech
 Author URI: http://www.libradesign.com.br/
-Description: Tema de Paulo Rocha 131
+Description: Tema de Bruno Mineiro 70
 Version: 1.0
-Text Domain: paulorocha
+Text Domain: brunomineiro
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
-*/
-@primary-color: #7e0204;
-@secondary-color: #da0d12;
+*/ 
+@primary-color: #054a37;
+@secondary-color: #96ac47;
 /*
 FUNÇÕES PADRÕES START
 *********************************************************************/
@@ -50,12 +50,11 @@ FONTS END
 /*
 ESTRUTURA START
 **********************************************************************************************/
-body {background: #F7F7F7;}
 .extra-header {
     background: @primary-color url(images/bg-header.jpg) no-repeat center top;position: relative;margin-bottom: 40px; 
     .container {}
     .menu-principal-container {padding-top:19px;}
-    .navbar-brand {height: 114px;padding-top:8px;padding-bottom: 8px;}
+    .navbar-brand {height: 114px;padding-top:16px;padding-bottom: 16px;}
     .navbar {
         margin-bottom: 0;border: 0;
         .nav {
@@ -85,29 +84,30 @@ body {background: #F7F7F7;}
 }
 .site-header-bottom {background: @secondary-color;position: absolute;left: 0;right: 0;height: 10px;top: 100%;z-index: 1009;}
 .site-content {min-height: 300px;}
-.site-central {background: #FFF;padding:20px;margin-bottom: 2px;}
-.home {
-    .site-central {background: none;padding:0;margin-bottom:0;}
-}
+
 .extra-boxs {
     .site-boxs {
         .lista-box {
-            margin: 0 -0.09%;
+            margin: 0 -0.1%;
             .box {
-                position: relative;float: left;margin: 0 0.09%;width: 24.802%;background: #000;overflow: hidden;
+                position: relative;float: left;margin: 0 0.1%;width: 24.8%;background: @primary-color;overflow: hidden;
                 &, a {height: 250px;}
                 a {color: #FFF;display: block;}
                 > a {position: relative;z-index: 2;}
                 > .video {position: absolute;left: 0;top: 0;z-index: 1;}
                 .imagem, .icone, .icone-content, .content, .content-extra {display: block;}
-                .imagem {position: relative;z-index: 1;}
+                .imagem {
+                    position: relative;z-index: 1;height: 250px;
+                    img {max-width: none;max-height: 100%;width: auto;position: absolute;top: 0;}
+                }
                 .icone {
-                    position: absolute;z-index: 3;right: 0;top: 0;bottom: 0;width: 70px;background: @primary-color;
+                    position: absolute;z-index: 3;right: 0;top: 0;bottom: 0;width: 70px;background: url(images/bg-box-right.jpg) no-repeat right bottom;
                     .icone-content {position: absolute;left: 0;right: 0;text-align: center;bottom:10px;}
                 }
                 .content {
-                    position:absolute;z-index: 2;bottom: -300px;right: 0px;left: 20px; font-size: 18px;line-height: 1;background: @secondary-color;letter-spacing: -1px;text-align: right;-webkit-border-radius: 3px 0px 0px 0px;-moz-border-radius: 3px 0px 0px 0px;-ms-border-radius: 3px 0px 0px 0px;-o-border-radius: 3px 0px 0px 0px;border-radius: 3px 0px 0px 0px;
-                    .content-extra {height: 61px;padding:10px 90px 0 22px;width: 100%;background:url(images/bg-box-bottom-right.jpg) no-repeat right top;}
+                    position:absolute;z-index: 2;bottom: -300px;right: 0;left: 0; font-size: 18px;line-height: 1;background: url(images/bg-box-bottom.png) no-repeat left top;letter-spacing: -1px;text-align: right;
+                    &, .content-extra {width: 100%;}
+                    .content-extra {height: 61px;padding:10px 90px 0 42px;background:url(images/bg-box-bottom-right.jpg) no-repeat right top;}
                 }
             }
         }
@@ -118,12 +118,12 @@ body {background: #F7F7F7;}
     .site-footer {
         > .container {padding-top:20px;padding-bottom: 20px;}
         .widget {
-            width: 62%;float: left;color: @primary-color;
+            width: 31%;float: left;
             &:nth-child(2) {text-align: center;}
             &.sendpress {
-                width: 40%;color: #000;
+                width: 38%;
                 > .sendpress, .widget-title {float: left;}
-                .widget-title {font-size: 21px;color: @primary-color;height: 67px;border-left:24px solid @primary-color;padding:10px 20px 0 10px;margin:0;width: 44%;}
+                .widget-title {font-size: 21px;color: @primary-color;height: 67px;border-left:24px solid @secondary-color;padding:10px 20px 0 10px;margin:0;width: 44%;}
                 > .sendpress {width: 47%;position: relative;}
                 .sendpress-submit {position: absolute;right: -38px;top: 31px;margin-top:0;}
             }
@@ -145,15 +145,15 @@ CLASSES START
     .cycle-prev, .cycle-next {display: block;position: absolute;top: 50%;margin-top:-58px;height: 116px;width: 100px;text-align: center;background: @secondary-color;padding:38px 0;z-index: 2;}
     .cycle-prev {left: 0;-webkit-border-radius: 0px 3px 3px 0px;-moz-border-radius: 0px 3px 3px 0px;-ms-border-radius: 0px 3px 3px 0px;-o-border-radius: 0px 3px 3px 0px;border-radius: 0px 3px 3px 0px;}
     .cycle-next {right: 0;-webkit-border-radius: 3px 0px 0px 3px;-moz-border-radius: 3px 0px 0px 3px;-ms-border-radius: 3px 0px 0px 3px;-o-border-radius: 3px 0px 0px 3px;border-radius: 3px 0px 0px 3px;}
-    &, .cycle-slideshow, .cycle-slideshow li {width: 100%;height: 404px;}
+    &, .cycle-slideshow, .cycle-slideshow li, .cycle-slideshow li a {width: 100%;height: 404px;}
     .cycle-slideshow {
         position: relative;z-index: 1;overflow: hidden;
         li {
             overflow: hidden;
             a {
-                display: block;
-                img {max-height: 100%;}
-            }
+                display: block;position: relative; 
+                img {max-height: 100%;position: absolute;top: 0;}
+            } 
         }
     }
 
@@ -203,7 +203,7 @@ CLASSES START
     }
 }
 .space {width:1%;display:inline-block;height:100%;vertical-align:middle;}
-.relative {position: relative;} 
+.relative {position: relative;}
 
 .wp-post-image {max-width: 100%;height: auto;}
 /**********************************************************************************************
