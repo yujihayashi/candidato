@@ -57,6 +57,9 @@ FONTS END
 /*
 ESTRUTURA START
 **********************************************************************************************/
+body {
+  background: #F7F7F7;
+}
 .extra-header {
   background: #7e0204 url(images/bg-header.jpg) no-repeat center top;
   position: relative;
@@ -227,9 +230,9 @@ ESTRUTURA START
   padding-bottom: 20px;
 }
 .extra-footer .site-footer .widget {
-  width: 31%;
+  width: 62%;
   float: left;
-  color: #FFF;
+  color: #7e0204;
 }
 .extra-footer .site-footer .widget:nth-child(2) {
   text-align: center;
@@ -244,7 +247,7 @@ ESTRUTURA START
 }
 .extra-footer .site-footer .widget.sendpress .widget-title {
   font-size: 21px;
-  color: #FFF;
+  color: #7e0204;
   height: 67px;
   border-left: 24px solid #7e0204;
   padding: 10px 20px 0 10px;

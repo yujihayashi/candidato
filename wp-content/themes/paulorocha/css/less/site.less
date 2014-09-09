@@ -50,6 +50,7 @@ FONTS END
 /*
 ESTRUTURA START
 **********************************************************************************************/
+body {background: #F7F7F7;}
 .extra-header {
     background: @primary-color url(images/bg-header.jpg) no-repeat center top;position: relative;margin-bottom: 40px; 
     .container {}
@@ -117,12 +118,12 @@ ESTRUTURA START
     .site-footer {
         > .container {padding-top:20px;padding-bottom: 20px;}
         .widget {
-            width: 31%;float: left;color: #FFF;
+            width: 62%;float: left;color: @primary-color;
             &:nth-child(2) {text-align: center;}
             &.sendpress {
                 width: 38%;color: #000;
                 > .sendpress, .widget-title {float: left;}
-                .widget-title {font-size: 21px;color: #FFF;height: 67px;border-left:24px solid @primary-color;padding:10px 20px 0 10px;margin:0;width: 44%;}
+                .widget-title {font-size: 21px;color: @primary-color;height: 67px;border-left:24px solid @primary-color;padding:10px 20px 0 10px;margin:0;width: 44%;}
                 > .sendpress {width: 47%;position: relative;}
                 .sendpress-submit {position: absolute;right: -38px;top: 31px;margin-top:0;}
             }

@@ -86,8 +86,8 @@
 						<div class="pull-left social-header">
 							<a href="#" title="Acesse nosso Youtube" target="_blank"><span class="icon-youtube"></span><span class="sr-only">Youtube</span></a>
 							<a href="#" title="Acesse nosso Instagram" target="_blank"><span class="icon-instagram"></span><span class="sr-only">Instagram</span></a>
-							<a href="#" title="Acesse nosso Facebook" target="_blank"><span class="icon-facebook"></span><span class="sr-only">Facebook</span></a>
-							<a href="#" title="Envie-nos um e-mail" target="_blank"><span class="icon-mail"></span><span class="sr-only">E-mail</span></a>
+							<a href="https://www.facebook.com/paulo.rocha.1865904?fref=ts" title="Acesse nosso Facebook" target="_blank"><span class="icon-facebook"></span><span class="sr-only">Facebook</span></a>
+							<a href="paulorochapt131@gmail.com" title="Envie-nos um e-mail" target="_blank"><span class="icon-mail"></span><span class="sr-only">E-mail</span></a>
 						</div>
 					</div> <!-- #primary-navigation -->
 				</div><!-- /.container-fluid -->
