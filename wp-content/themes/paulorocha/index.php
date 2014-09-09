@@ -51,8 +51,13 @@ get_header(); ?>
 	</div><!-- #main-content -->
 <script type="text/javascript">
 	jQuery(document).ready(function ($) {
-		var imagem = $('.box-banner .cycle-slideshow img');
-		imagem.css({marginLeft: '-723px', left: '50%', position: 'absolute'});
+		$('.box-banner .cycle-slideshow img').each(function () {
+			$(this).load(function() {
+			var leftMove = $(this).width()/2;
+			//console.log(leftMove);
+			$(this).css({left: '50%', marginLeft: '-'+leftMove+'px'});
+			});
+		});
 	});
 </script>
 	<?php
