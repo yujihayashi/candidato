@@ -321,9 +321,12 @@ CLASSES START
 }
 .box-banner .cycle-slideshow li a {
   display: block;
+  position: relative;
 }
 .box-banner .cycle-slideshow li a img {
   max-height: 100%;
+  position: absolute;
+  top: 0;
 }
 .category .post-thumbnail {
   overflow: hidden;

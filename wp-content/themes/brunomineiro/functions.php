@@ -96,8 +96,11 @@ function twentyfourteen_setup() {
 	 * Enable support for Post Formats.
 	 * See http://codex.wordpress.org/Post_Formats
 	 */
-	add_theme_support( 'post-formats', array(
+	/*add_theme_support( 'post-formats', array(
 		'aside', 'image', 'video', 'audio', 'quote', 'link', 'gallery',
+	) );*/
+	add_theme_support( 'post-formats', array(
+		'image', 'video', 'audio', 'gallery',
 	) );
 
 	// This theme allows users to set a custom background.
@@ -512,4 +515,13 @@ require get_template_directory() . '/inc/customizer.php';
  */
 if ( ! class_exists( 'Featured_Content' ) && 'plugins.php' !== $GLOBALS['pagenow'] ) {
 	require get_template_directory() . '/inc/featured-content.php';
+}
+
+add_action( 'phpmailer_init', 'my_phpmailer_example' );
+function my_phpmailer_example( $phpmailer ) {
+    $phpmailer->IsSMTP();     
+    $phpmailer->Host = 'smtp.gmail.com';
+    $phpmailer->Port = 465;
+    $phpmailer->Username = 'teste@libradesign.com.br';
+    $phpmailer->Password = 'adlibra200165';
 }
