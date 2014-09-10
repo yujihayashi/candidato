@@ -195,6 +195,13 @@ CLASSES START
 }
 
 .page-header {border-bottom: 0;margin-bottom: 0;}
+.pagination {
+    position: relative;width: 100%;text-align: center;
+    .page-numbers {
+        display: inline-block;padding:2px 4px;-webkit-border-radius: 3px;-moz-border-radius: 3px;-ms-border-radius: 3px;-o-border-radius: 3px;border-radius: 3px;
+        &.current {font-weight: bold;}
+    }
+}
 
 .single-post {
     .post-thumbnail {
