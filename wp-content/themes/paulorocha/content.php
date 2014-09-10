@@ -50,9 +50,11 @@
 
 	<?php if ( is_search() ) : ?>
 	<div class="entry-summary">
+	<?php the_tags( '<p class="entry-meta">Tags: <span class="tag-links">', '', '</span></p>' ); ?>
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
 	<?php elseif ( is_category() ) : ?>
+	<?php the_tags( '<p class="entry-meta">Tags: <span class="tag-links">', '', '</span></p>' ); ?>
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
@@ -69,8 +71,9 @@
 		?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>
-
-	<?php the_tags( '<footer class="entry-meta"><span class="tag-links">', '', '</span></footer>' ); ?>
+	<?php if ( is_single() ) : ?>
+	<?php the_tags( '<footer class="entry-meta">Tags: <span class="tag-links">', '', '</span></footer>' ); ?>
+	<?php endif; ?>
 <?php if ( !is_category('propostas') && !is_single() ) : ?>
 </div> <!-- .media-body -->
 </div> <!-- .media -->

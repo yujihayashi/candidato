@@ -9,7 +9,7 @@
  * When using a child theme you can override certain functions (those wrapped
  * in a function_exists() call) by defining them first in your child theme's
  * functions.php file. The child theme's functions.php file is included before
- * the parent theme's file, so the child theme functions would be used.
+ * the parent theme's file, so the child theme functions would be used.''
  *
  * @link http://codex.wordpress.org/Theme_Development
  * @link http://codex.wordpress.org/Child_Themes
@@ -96,8 +96,11 @@ function twentyfourteen_setup() {
 	 * Enable support for Post Formats.
 	 * See http://codex.wordpress.org/Post_Formats
 	 */
-	add_theme_support( 'post-formats', array(
+	/*add_theme_support( 'post-formats', array(
 		'aside', 'image', 'video', 'audio', 'quote', 'link', 'gallery',
+	) );
+*/	add_theme_support( 'post-formats', array(
+		 'image', 'video', 'audio', 'gallery',
 	) );
 
 	// This theme allows users to set a custom background.
@@ -205,16 +208,7 @@ add_action( 'widgets_init', 'twentyfourteen_widgets_init' );
  * @return string
  */
 function twentyfourteen_font_url() {
-	$font_url = '';
-	/*
-	 * Translators: If there are characters in your language that are not supported
-	 * by Lato, translate this to 'off'. Do not translate into your own language.
-	 */
-	if ( 'off' !== _x( 'on', 'Lato font: on or off', 'twentyfourteen' ) ) {
-		$font_url = add_query_arg( 'family', urlencode( 'Lato:300,400,700,900,300italic,400italic,700italic' ), "//fonts.googleapis.com/css" );
-	}
 
-	return $font_url;
 }
 
 /**
@@ -513,3 +507,4 @@ require get_template_directory() . '/inc/customizer.php';
 if ( ! class_exists( 'Featured_Content' ) && 'plugins.php' !== $GLOBALS['pagenow'] ) {
 	require get_template_directory() . '/inc/featured-content.php';
 }
+
