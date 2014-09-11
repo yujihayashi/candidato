@@ -19,6 +19,92 @@ FUNÇÕES PADRÕES START
 /*********************************************************************
 FUNÇÕES PADRÕES END
 */
+/*
+NON-RESPONSIVE START
+**********************************************************************************************/
+/* ALTERAR APENAS ESTAS VARIAVEIS DE ACORDO COM O PROJETO START */
+.container {
+  max-width: none !important;
+  width: 960px;
+}
+.navbar-nav > li > a {
+  padding-top: 39px;
+  padding-bottom: 39px;
+}
+/* ALTERAR APENAS ESTAS VARIAVEIS DE ACORDO COM O PROJETO END */
+/* Finesse the page header spacing */
+.page-header {
+  margin-bottom: 30px;
+}
+.page-header .lead {
+  margin-bottom: 10px;
+}
+/* Non-responsive overrides** Utilitze the following CSS to disable the responsive-ness of the container,* grid system, and navbar.*/
+/* Reset the container */
+/* Always float the navbar header */
+.navbar-header {
+  float: left;
+}
+/* Undo the collapsing navbar */
+.navbar-collapse {
+  display: block !important;
+  height: auto !important;
+  padding-bottom: 0;
+  overflow: visible !important;
+}
+.navbar-toggle {
+  display: none;
+}
+.navbar-collapse {
+  border-top: 0;
+}
+.navbar-brand {
+  margin-left: -15px;
+}
+/* Always apply the floated nav */
+.navbar-nav {
+  float: left;
+  margin: 0;
+}
+.navbar-nav > li {
+  float: left;
+}
+/* Redeclare since we override the float above */
+.navbar-nav.navbar-right {
+  float: right;
+}
+/* Undo custom dropdowns */
+.navbar .navbar-nav .open .dropdown-menu {
+  position: absolute;
+  float: left;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-width: 0 1px 1px;
+  border-radius: 0 0 4px 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+  color: #333;
+}
+.navbar .navbar-nav .open .dropdown-menu > li > a:hover,
+.navbar .navbar-nav .open .dropdown-menu > li > a:focus,
+.navbar .navbar-nav .open .dropdown-menu > .active > a,
+.navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
+  color: #fff !important;
+  background-color: #428bca !important;
+}
+.navbar .navbar-nav .open .dropdown-menu > .disabled > a,
+.navbar .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+.navbar .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+  color: #999 !important;
+  background-color: transparent !important;
+}
+/**********************************************************************************************
+NON-RESPONSIVE END
+*/
 ::selection {
   background-color: #054a37;
   color: #FFF;
@@ -57,6 +143,11 @@ FONTS END
 /*
 ESTRUTURA START
 **********************************************************************************************/
+.extra-header,
+.extra-central,
+.extra-footer {
+  min-width: 960px;
+}
 .extra-header {
   background: #054a37 url(images/bg-header.jpg) no-repeat center top;
   position: relative;
@@ -131,7 +222,7 @@ ESTRUTURA START
   z-index: 1009;
 }
 .site-content {
-  min-height: 300px;
+  min-height: 280px;
 }
 .extra-boxs .site-boxs .lista-box {
   margin: 0 -0.1%;
@@ -318,7 +409,7 @@ CLASSES START
 .box-banner .cycle-slideshow li,
 .box-banner .cycle-slideshow li a {
   width: 100%;
-  height: 404px;
+  height: 338px;
 }
 .box-banner .cycle-slideshow {
   position: relative;
@@ -333,7 +424,8 @@ CLASSES START
   position: relative;
 }
 .box-banner .cycle-slideshow li a img {
-  max-height: 100%;
+  height: auto;
+  max-width: 100%;
   position: absolute;
   top: 0;
 }
@@ -491,6 +583,10 @@ JQUERY UI END
   /*#GERAL:before {content:"MOBILE";}*/
 }
 @media (min-width: 768px) and (max-width: 980px) {
+  /* .navbar-brand {
+        padding-top:44px;
+        img {width: 100px;height: auto;}
+        } */
   .extra-boxs .site-boxs .lista-box .box .content {
     font-size: 16px;
   }
@@ -501,5 +597,27 @@ JQUERY UI END
     font-size: 14px;
     letter-spacing: normal;
     line-height: .9;
+  }
+}
+@media (max-width: 1200px) {
+  .extra-header .navbar .nav > li > a {
+    font-size: 14px;
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+  /*    .navbar-brand {
+    // padding-top:36px !important;
+    // img {width: 130px;height: auto;}
+    } */
+  .box-banner,
+  .box-banner .cycle-slideshow,
+  .box-banner .cycle-slideshow li,
+  .box-banner .cycle-slideshow li a {
+    height: 280px;
+  }
+}
+@media (min-width: 1201px) {
+  .container {
+    width: 1160px;
   }
 }
