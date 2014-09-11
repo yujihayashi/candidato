@@ -38,7 +38,7 @@
 				</div> <!-- .box -->
 				<div class="box">
 					<a href="/categoria/propostas/" title="As propostas de Paulo pro povo">
-						<span class="imagem"><img src="" alt=""></span>
+						<span class="imagem"><img src="<?php echo get_template_directory_uri(); ?>/images/propostas.jpg" alt="Paulo Rocha conversando com eleitora"></span>
 						<span class="icone"><span class="icone-content"><span class="icon-balao"></span></span></span>
 						<span class="content">
 							<span class="content-extra">As propostas de Paulo pro povo</span>
@@ -47,7 +47,7 @@
 				</div> <!-- .box -->
 				<div class="box">
 					<a href="/agenda/" title="Acompanhe a agenda do 131">
-						<span class="imagem"><img src="" alt=""></span>
+						<span class="imagem"><img src="<?php echo get_template_directory_uri(); ?>/images/agenda.jpg" alt="Comócio Paulo Rocha"></span>
 						<span class="icone"><span class="icone-content"><span class="icon-agenda"></span></span></span>
 						<span class="content">
 							<span class="content-extra">Acompanhe a agenda do 131</span>
@@ -56,7 +56,7 @@
 				</div> <!-- .box -->
 				<div class="box">
 					<a href="#" title="Escute o jingle da campanha">
-						<span class="imagem"><img src="" alt=""></span>
+						<span class="imagem"><img src="<?php echo get_template_directory_uri(); ?>/images/audio.jpg" alt="Bandeira e comício Paulo Rocha"></span>
 						<span class="icone"><span class="icone-content"><span class="icon-audio"></span></span></span>
 						<span class="content">
 							<span class="content-extra">Escute o jingle da campanha</span>
