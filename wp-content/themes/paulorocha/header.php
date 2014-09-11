@@ -27,7 +27,8 @@
 	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.png" type="image/png" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="author" content="Libra Design" />
-	<meta name="keywords" content="" />
+	<meta name="keywords" content="Paulo, Rocha, 131, PT, partido, Pará, Belém, Deputado, Estadual" />
+<meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/logo-mini.jpg" />
 <meta property="og:type" content="website" />
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">

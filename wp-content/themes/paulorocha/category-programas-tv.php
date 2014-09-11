@@ -12,8 +12,7 @@
 get_header(); ?>
 <h1 class="text-primary sr-only">TV 131</h1>
 <?php if ( have_posts() ) : ?>
-	<ul class="lista-tv">
-		
+	<ul class="lista-tv clearfix">
 		<?php
 					// Start the Loop.
 		while ( have_posts() ) : the_post();

@@ -12,9 +12,9 @@
 <?php if(!is_category('propostas') && !is_single()):$postClasse = 'media-list';endif; ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class($postClasse); ?>>
 
-	<?php if ( !is_category('propostas') && is_single() ) : ?>
+	<?php if ( !is_category('propostas') && !is_category('programas-tv') && is_single() ) : ?>
 		<?php twentyfourteen_post_thumbnail(); ?>
-	<?php elseif ( !is_category('propostas') && !is_single() ) : ?>
+	<?php elseif ( !is_category('propostas') && !is_category('programas-tv') && !is_single() ) : ?>
 	<div class="media">
 		<span class="pull-left"><?php the_post_thumbnail('thumbnail'); ?></span>
 		<div class="media-body">
@@ -53,6 +53,10 @@
 	<?php the_tags( '<p class="entry-meta">Tags: <span class="tag-links">', '', '</span></p>' ); ?>
 		<?php the_excerpt(); ?>
 	</div><!-- .entry-summary -->
+	<?php elseif ( is_category('programas-tv') ) : ?>
++	<div class="entry-summary">
++		<?php the_post_thumbnail(); ?>
++	</div><!-- .entry-summary -->
 	<?php elseif ( is_category() ) : ?>
 	<?php the_tags( '<p class="entry-meta">Tags: <span class="tag-links">', '', '</span></p>' ); ?>
 	<div class="entry-summary">
@@ -74,7 +78,7 @@
 	<?php if ( is_single() ) : ?>
 	<?php the_tags( '<footer class="entry-meta">Tags: <span class="tag-links">', '', '</span></footer>' ); ?>
 	<?php endif; ?>
-<?php if ( !is_category('propostas') && !is_single() ) : ?>
+<?php if ( !is_category('propostas') && !is_category('programas-tv') && !is_single() ) : ?>
 </div> <!-- .media-body -->
 </div> <!-- .media -->
 <?php endif; ?>

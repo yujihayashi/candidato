@@ -27,16 +27,8 @@
 	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.png" type="image/png" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="author" content="Libra Design" />
-	<meta name="keywords" content="" />
-	<? if ($pagInicial): ?>
-	<meta property="og:description" content="" />
-	<meta name="description" content="" />
-	<meta property="og:url" content="<?= $url; ?>" />
-	<meta property="og:title" content="Bruno Mineiro 70 - Vice Aline Gurgel - Pense diferente! Governador da gente" />
-<? endif; ?>
+	<meta name="keywords" content="Bruno, Mineiro, Aline, Gurgel, Amapá, Macapá, Governador, candidato, PTdoB, PT do B, 70, gente" />
 <meta property="og:image" content="<?php echo get_template_directory_uri(); ?>/images/logo-mini.jpg" />
-<meta property="og:site_name" content="Bruno Mineiro 70 - Vice Aline Gurgel - Pense diferente! Governador da gente" />
-<meta property="og:type" content="website" />
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/bootstrap/css/bootstrap.min.css">
