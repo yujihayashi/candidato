@@ -40,7 +40,7 @@
 				</div> <!-- .box -->
 				<div class="box">
 					<a href="/categoria/propostas/" title="Os compromissos do 70 com o povo">
-						<span class="imagem"><img src="" alt=""></span>
+						<span class="imagem"><img src="<?php echo get_template_directory_uri(); ?>/images/propostas.jpg" alt=""></span>
 						<span class="icone"><span class="icone-content"><span class="icon-balao"></span></span></span>
 						<span class="content">
 							<span class="content-extra">Os compromissos do 70 com o povo</span>
@@ -49,7 +49,7 @@
 				</div> <!-- .box -->
 				<div class="box">
 					<a href="/agenda/" title="Veja a agenda de Bruno e Aline">
-						<span class="imagem"><img src="" alt=""></span>
+						<span class="imagem"><img src="<?php echo get_template_directory_uri(); ?>/images/agenda.jpg" alt=""></span>
 						<span class="icone"><span class="icone-content"><span class="icon-agenda"></span></span></span>
 						<span class="content">
 							<span class="content-extra">Veja a agenda de Bruno e Aline</span>
@@ -57,8 +57,8 @@
 					</a>
 				</div> <!-- .box -->
 				<div class="box">
-					<a href="#" title="Escute o jingle da campanha">
-						<span class="imagem"><img src="" alt=""></span>
+					<a href="/categoria/campanha/audios/" title="Escute o jingle da campanha">
+						<span class="imagem"><img src="<?php echo get_template_directory_uri(); ?>/images/audios.jpg" alt=""></span>
 						<span class="icone"><span class="icone-content"><span class="icon-audio"></span></span></span>
 						<span class="content">
 							<span class="content-extra">Escute o jingle da campanha</span>
