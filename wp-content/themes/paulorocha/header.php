@@ -20,7 +20,7 @@
 <!--<![endif]-->
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width">
+	<!-- <meta name="viewport" content="width=device-width"> -->
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
 	<meta content="<?php echo get_template_directory_uri(); ?>/images/favicon.png" itemprop="image">
 	<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.png" type="image/png" />
