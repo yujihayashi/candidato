@@ -378,6 +378,20 @@ CLASSES START
   margin-bottom: 0;
   padding-left: 0;
 }
+.alignleft {
+  margin-right: 18px;
+  margin-bottom: 10px;
+  float: left;
+}
+.alignright {
+  margin-left: 18px;
+  margin-bottom: 10px;
+  float: right;
+}
+.aligncenter {
+  display: block;
+  margin: 0 auto;
+}
 .btn-gray {
   background: #EEE;
   color: #C93F2A;
@@ -457,6 +471,14 @@ CLASSES START
   -o-border-radius: 3px;
   border-radius: 3px;
   display: block;
+}
+.entry-content:before,
+.entry-content:after {
+  display: table;
+  content: " ";
+}
+.entry-content:after {
+  clear: both;
 }
 .imagem {
   display: inline-block;

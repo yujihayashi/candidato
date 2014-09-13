@@ -149,6 +149,9 @@ ESTRUTURA END
 CLASSES START
 **********************************************************************************************/
 [class^='lista-'], [class^='lista-'], [class^='menu-'], [class^='menu-'] ul, .cycle-slideshow {list-style:none;margin-bottom:0;padding-left:0;}
+.alignleft {margin-right: 18px;margin-bottom: 10px;float: left;}
+.alignright {margin-left: 18px;margin-bottom: 10px;float: right;}
+.aligncenter {display: block;margin:0 auto;}
 .btn-gray {background: #EEE;color:#C93F2A;}
 .btn-rounded {-webkit-border-radius: 150px;-moz-border-radius: 150px;border-radius: 150px;}
 
@@ -175,6 +178,8 @@ CLASSES START
         overflow: hidden;height: 200px;width: 100%;margin-bottom: 10px;-webkit-border-radius: 3px;-moz-border-radius: 3px;-ms-border-radius: 3px;-o-border-radius: 3px;border-radius: 3px;display: block;
     }
 }
+.entry-content:before, .entry-content:after {display: table;content: " ";}
+.entry-content:after {clear: both;}
 
 .imagem {display: inline-block;overflow: hidden;max-width: 100%;}
 .imagem-rounded {-webkit-border-radius: 150px;-moz-border-radius: 150px;border-radius: 150px;}
