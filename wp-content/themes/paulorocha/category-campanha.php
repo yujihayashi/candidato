@@ -24,17 +24,34 @@ get_header(); ?>
 
 				?>
 				<div class="row">
-					<div class="col-md-6"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></div>
+					<div class="col-md-6"><a href="<?php the_permalink(); ?>" title="Clique para assistir"><?php the_title(); ?></a></div>
 					<div class="col-md-6 text-right"><a href="/categoria/programas-tv/"><strong>Ver todos</strong></a></div>
 				</div>
 
-				<?php the_excerpt(); ?>
+				<a href="<?php the_permalink(); ?>" title="Clique para assistir"><?php the_post_thumbnail(); ?></a>
 				<?php
 				endforeach; 
 				?>
 			</div> <!-- .col-md-5 -->
 			<div class="col-md-7">
 				<h2 class="h1 text-primary">No Rádio:</h2>
+				<?
+				global $post;
+				$args = array( 'numberposts' => 1, 'category_name' => 'audios' );
+				$posts = get_posts( $args );
+				foreach( $posts as $post ): setup_postdata($post); 
+
+				?>
+				<div class="row">
+					<div class="col-md-6"><a href="<?php the_permalink(); ?>" title="Clique para assistir"><?php the_title(); ?></a></div>
+					<div class="col-md-6 text-right"><a href="/categoria/audios/"><strong>Ver todos</strong></a></div>
+				</div>
+
+				<?php the_content(); ?>
+				<?php
+				endforeach; 
+				?>
+				
 				<h2 class="h1 text-primary">Agenda:</h2>
 				<ul class="media-list lista-agenda">
 					<?php

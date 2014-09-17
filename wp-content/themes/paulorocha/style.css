@@ -363,6 +363,9 @@ body {
   top: 31px;
   margin-top: 0;
 }
+.category .post .entry-title {
+  margin-top: 0px;
+}
 /**********************************************************************************************
 ESTRUTURA END
 */

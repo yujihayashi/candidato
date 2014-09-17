@@ -66,9 +66,9 @@ get_header(); ?>
 				?>
 
 				<li class="media">
-						<?php if ( has_post_thumbnail() ) { ?>
-							<span class="pull-left"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a></span>
-						<?php } ?>
+					<?php if ( has_post_thumbnail() ) { ?>
+					<span class="pull-left"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('thumbnail'); ?></a></span>
+					<?php } ?>
 					<div class="media-body">
 						<h3 class="media-heading h4"><small><span class="event-date"><?php echo tribe_get_start_date($post->ID, true, 'j M Y'); ?></span></small><br><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 						</h3>
