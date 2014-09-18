@@ -10,49 +10,36 @@
  */
 
 get_header(); ?>
-
 <section id="primary" class="content-area">
 	<div id="content" class="site-content" role="main">
-
+		<h2 class="text-primary">Diretrizes para uma plataforma de trabalho no Senado Federal</h2>
+		<p><small>Clique nos temas abaixo para ver mais detalhes:</small></p>
 		<?php if ( have_posts() ) : ?>
 
-		<header class="archive-header">
-
-			<?php
-					// Show an optional term description.
-			$term_description = term_description();
-			if ( ! empty( $term_description ) ) :
-				printf( '<div class="taxonomy-description">%s</div>', $term_description );
-			endif;
-			?>
-		</header><!-- .archive-header -->
-
-		<div class="lista-propostas" id="masonry">
-			<div class="grid-sizer"></div>
+		<div class="panel-group" id="accordion">
 			<?php
 					// Start the Loop.
 			while ( have_posts() ) : the_post();
 			?>
-			<div class="item">
-				<?
-					/*
-					 * Include the post format-specific template for the content. If you want to
-					 * use this in a child theme, then include a file called called content-___.php
-					 * (where ___ is the post format) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-					?>
-					<p>
-						<a href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank" title="Clique para compartilhar esta proposta no Facebook"><span class="sr-only">Compartilhe no Facebook</span><span class="icon-compartilhe-facebook"></span></a>
-					</p>
-					<hr>
-				</div> <!-- .item -->
-				
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<h4 class="panel-title">
+						<a data-toggle="collapse" data-parent="#accordion" href="#proposta-<?php the_ID(); ?>">
+							<? the_title(); ?>
+						</a>
+					</h4>
+				</div> <!-- .panel-heading -->
+				<div id="proposta-<?php the_ID(); ?>" class="panel-collapse collapse">
+					<div class="panel-body">
+						<? the_content(); ?>
+					</div> <!-- .panel-body -->
+				</div> <!-- .panel-collapse -->
+			</div> <!-- .panel -->
 				<?
 				endwhile;
 					// Previous/next page navigation.
 				?>
-			</div> <!-- .lista-propostas -->
+		</div> <!-- .panel-group -->
 			<?
 			twentyfourteen_paging_nav();
 
@@ -66,12 +53,7 @@ get_header(); ?>
 	</section><!-- #primary -->
 	<script type="text/javascript">
 	jQuery(document).ready(function ($) {
-		var $container = $('#masonry');
-		// initialize
-		$container.masonry({
-			columnWidth: ".grid-sizer",
-			itemSelector: '.item'
-		});
+		$('.panel:first-child').find('.panel-collapse').addClass('in');
 	}); 
 	</script>
 	<?php
