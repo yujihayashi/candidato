@@ -9,26 +9,23 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<a class="post-thumbnail" href="<?php the_permalink(); ?>">
-	<?php
+	<div class="media">
+		<a class="post-thumbnail pull-left img-thumbnail img-rounded" href="<?php the_permalink(); ?>">
+			<?php
 		// Output the featured image.
-		if ( has_post_thumbnail() ) :
-			if ( 'grid' == get_theme_mod( 'featured_content_layout' ) ) {
-				the_post_thumbnail();
-			} else {
-				the_post_thumbnail( 'twentyfourteen-full-width' );
-			}
-		endif;
-	?>
-	</a>
-
-	<header class="entry-header">
-		<?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) && twentyfourteen_categorized_blog() ) : ?>
-		<div class="entry-meta">
-			<span class="cat-links"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'twentyfourteen' ) ); ?></span>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-
-		<?php the_title( '<h1 class="entry-title text-primary"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">','</a></h1>' ); ?>
-	</header><!-- .entry-header -->
+			if ( has_post_thumbnail() ) :
+				the_post_thumbnail('large');
+			endif;
+			?>
+		</a>
+		<div class="media-body">
+			<header class="entry-header">
+			<?php the_title( '<h1 class="entry-title text-primary"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">','</a></h1>' ); ?>
+		</header><!-- .entry-header -->
+		<div class="entry-summary">
+			<?php the_tags( '<p class="entry-meta">Tags: <span class="tag-links">', '', '</span></p>' ); ?>
+			<?php the_excerpt(); ?>
+		</div><!-- .entry-summary -->
+	</div> <!-- .media-body -->
+</div> <!-- .media -->
 </article><!-- #post-## -->

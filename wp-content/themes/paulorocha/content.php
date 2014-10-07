@@ -16,7 +16,7 @@
 		<?php twentyfourteen_post_thumbnail(); ?>
 	<?php elseif ( !is_category('propostas') && !is_category('programas-tv') && !is_single() ) : ?>
 	<div class="media">
-		<span class="pull-left"><?php the_post_thumbnail('thumbnail'); ?></span>
+		<span class="pull-left img-rounded"><?php the_post_thumbnail('thumbnail'); ?></span>
 		<div class="media-body">
 	<?php endif; ?>
 	<header class="entry-header">
@@ -57,7 +57,7 @@
 +	<div class="entry-summary">
 +		<?php the_post_thumbnail(); ?>
 +	</div><!-- .entry-summary -->
-	<?php elseif ( is_category() ) : ?>
+	<?php elseif ( is_category() or is_home() ) : ?>
 	<?php the_tags( '<p class="entry-meta">Tags: <span class="tag-links">', '', '</span></p>' ); ?>
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
